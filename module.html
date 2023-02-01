@@ -80,10 +80,10 @@ tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
                         </div>
                         <ul class="modules-cards__list">
                             <li class="modules-cards__list-item">
-                                <a href="/" class="modules-cards__list-link">
+                                <div class="modules-cards__list-link js-open-video">
                                     <img src="/assets/acessos/Video_Escuro.png" alt="vídeos" class="modules-cards__list-image">
                                     <span class="modules-cards__list-text">vídeos</span>
-                                </a>
+                                </div>
                             </li>
                             <li class="modules-cards__list-item">
                                 <a href="/" class="modules-cards__list-link">
@@ -249,13 +249,33 @@ tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
                 <a href="/" class="journey-modules__actions-link">
                     <i class="fa-solid fa-chevron-right journey-modules__actions-icon"></i>
                 </a>
-
-                
             </div>
         </div>
     </section>
+
+    <div class="video js-video">
+        <div class="video__container">
+            <div class="video__actions">
+                <div class="video__actions-item js-prev-container">
+                    <i class="fa-solid fa-chevron-left video__actions-icon js-prev"></i>
+                </div>
+                <div class="video__actions-item js-next-container">
+                    <i class="fa-solid fa-chevron-right video__actions-icon js-next"></i>
+                </div>
+                <div class="video__actions-item">
+                    <i class="fa-solid fa-close video__actions-icon js-close-video"></i>
+                </div>
+            </div>
+            <div class="video__title-container">
+                <span class="video__title js-title-video"></span>
+            </div>
+            <div id="player" class="video__player"></div>
+        </div>
+    </div>
 </body>
+<script src="https://www.youtube.com/iframe_api"></script>
 <script src="https://kit.fontawesome.com/a9545f17e8.js"></script>
 <script src="js/modules-cards.js"></script>
+<script src="js/youtube.js"></script>
 </html>
 

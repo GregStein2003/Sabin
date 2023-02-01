@@ -2464,6 +2464,81 @@ input[type="checkbox"]:checked::before {
     font-size: 22px;
 }
 
+.video {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 999999;
+    padding: 50px 100px;
+    display: none;
+}
+
+.video.video--active {
+    display: block;
+}
+
+.video__container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: rgba(236, 14, 71, 1);
+    border-radius: 50px 50px 0px 50px;
+    padding: 50px 20px 20px 20px;
+}
+
+.video__actions {
+    position: absolute;
+    top: 15px;
+    right: 45px;
+    display: flex;
+    column-gap: 15px;
+}
+
+.video__actions-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22px;
+    width: 22px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.video__player {
+    height: 100%;
+    width: 100%;
+    border-radius: 50px 50px 0px 50px;
+}
+
+.video__actions-icon {
+    font-size: 18px;
+}
+
+.video__title-container {
+    position: absolute;
+    top: 8px;
+    left: 45px;
+    display: flex;
+    column-gap: 15px;
+}
+
+.video__title {
+    color: rgba(34, 38, 59, 1);
+    font-size: 24px;
+    font-family: 'Jost - Light';
+    font-weight: 400;
+}
+
+.disabled {
+    background-color: grey;
+    pointer-events: none;
+    cursor: normal;
+}
+
 
 @font-face {
     font-family: 'Lora';
