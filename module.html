@@ -80,7 +80,7 @@ tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
                         </div>
                         <ul class="modules-cards__list">
                             <li class="modules-cards__list-item">
-                                <div class="modules-cards__list-link js-open-video">
+                                <div class="modules-cards__list-link js-open-video" data-index="0">
                                     <img src="/assets/acessos/Video_Escuro.png" alt="vídeos" class="modules-cards__list-image">
                                     <span class="modules-cards__list-text">vídeos</span>
                                 </div>
@@ -144,10 +144,10 @@ tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
                         </div>
                         <ul class="modules-cards__list">
                             <li class="modules-cards__list-item">
-                                <a href="/" class="modules-cards__list-link">
+                                <div class="modules-cards__list-link js-open-video" data-index="1">
                                     <img src="/assets/acessos/Video_Escuro.png" alt="vídeos" class="modules-cards__list-image">
                                     <span class="modules-cards__list-text">vídeos</span>
-                                </a>
+                                </div>
                             </li>
                             <li class="modules-cards__list-item">
                                 <a href="/" class="modules-cards__list-link">
@@ -273,9 +273,45 @@ tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </div>
     </div>
 </body>
+
 <script src="https://www.youtube.com/iframe_api"></script>
 <script src="https://kit.fontawesome.com/a9545f17e8.js"></script>
 <script src="js/modules-cards.js"></script>
 <script src="js/youtube.js"></script>
+<script src="js/countries.js"></script>
+
+<script>
+//     const API_KEY = "AIzaSyAnPO7JaEMbrENYdEYsyCMcfL9WYRYUfRM";
+//     const playlistId = "PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n";
+    
+//     function createPlaylist() {
+//         const API_KEY = "AIzaSyAnPO7JaEMbrENYdEYsyCMcfL9WYRYUfRM";
+//         const playlistId = "PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n";
+//         const endpoint = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${playlistId}&key=${API_KEY}`;
+
+
+//         var xhr = new XMLHttpRequest();
+//         xhr.open("GET", `${endpoint}`, true);
+//         xhr.onreadystatechange = function() {
+//             if (xhr.readyState === 4 && xhr.status === 200) {
+//                 var data = JSON.parse(xhr.responseText);
+//                 var playlist = document.getElementById("player");
+//                 for (var i = 0; i < data.items.length; i++) {
+//                     var videoId = data.items[i].snippet.resourceId.videoId;
+//                     var title = data.items[i].snippet.title;
+//                     var thumbnail = data.items[i].snippet.thumbnails.default.url;
+//                     var listItem = document.createElement("li");
+//                     listItem.innerHTML = '<img src="' + thumbnail + '" /><a href="#" onclick="startVideo(\'' + videoId + '\')">' + title + '</a>';
+//                     console.log(listItem)
+//                     playlist.appendChild(listItem);
+//                 }
+//             }
+//         };
+//         xhr.send();
+// }
+
+// createPlaylist()
+
+</script>
 </html>
 

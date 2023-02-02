@@ -1,14 +1,20 @@
 var player;
-const openModalElement = document.querySelector(".js-open-video");
+const openModalElement = document.querySelectorAll(".js-open-video");
 const modal = document.querySelector(".js-video");
 const containerPrev = document.querySelector(".js-prev-container");
 const containerNext = document.querySelector(".js-next-container");
 
 
-openModalElement.addEventListener("click", function(){
-    modal.classList.add("video--active");
-    onPlayerReady();
+openModalElement.forEach(function(element){
+    element.addEventListener("click", function(){
+        var indexVideo = element.dataset.index;
+        modal.classList.add("video--active");
+        onPlayerReady(indexVideo);
+    })
+    
 })
+
+
 
 function onYouTubePlayerAPIReady() {
     player = new YT.Player('player', {
@@ -19,21 +25,17 @@ function onYouTubePlayerAPIReady() {
         //    'controls': 0,
          },
         events: {
-            // 'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange,
         }
     });
-
-    // document.querySelector(".js-title-video").innerHTML = player.videoTitle;
-
-    // console.log(player.videoTitle)
 }
 
-function onPlayerReady(event) {
+function onPlayerReady(index) {
     player.loadPlaylist({
         'listType': 'playlist',
         'list': 'PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n',
         "loopPlaylists": false,
+        "index": index
     });
 
     onChangeTitle(player)
