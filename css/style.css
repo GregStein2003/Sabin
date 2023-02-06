@@ -1203,7 +1203,6 @@ main {
     max-width: 75px;
 }
 
-.journey__list-item--active  .journey__list,
 .journey__list-item--active .journey__title-container{
     display: none;
 }

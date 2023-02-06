@@ -13,6 +13,46 @@
         <div class="header__logo-container">
             <img src="/assets/logotipos/Ver1_AzulVermelho.png" alt="Logo" class="header__logo js-logo">
         </div>
+        <div class="header__navbar">
+            <span class="header__accessibility-letter js-increase">
+                A+
+            </span>
+            <span class="header__accessibility-letter js-decrease">
+                A-
+            </span>
+            <svg class="header__icon-dark-mode js-dark-mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                    d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zm64 0c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256z" />
+            </svg>
+            <div class="header__bars js-menu">
+                <div class="header__bars-line"></div>
+                <div class="header__bars-line"></div>
+                <div class="header__bars-line"></div>
+            </div>
+
+            <div class="header__navbar-menu">
+                <ul class="header__navbar-menu-list">
+                    <li class="header__navbar-menu-item">
+                        <a href="" class="header__navbar-menu-link header__navbar-menu-link--active ">
+                            início
+                        </a>
+                    </li>
+                    <li class="header__navbar-menu-item">
+                        <a href="" class="header__navbar-menu-link">
+                            quem somos
+                        </a>
+                    </li>
+                    <li class="header__navbar-menu-item">
+                        <a href="" class="header__navbar-menu-link">
+                            a jornada
+                        </a>
+                    </li>
+                </ul>
+                <a href="" class="header__navbar-menu-link">
+                    entre ou cadastre-se
+                </a>
+            </div>
+        </div>
     </header>
 
     <div class="sidebar sidebar--active">
@@ -80,13 +120,13 @@ tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
                         </div>
                         <ul class="modules-cards__list">
                             <li class="modules-cards__list-item">
-                                <div class="modules-cards__list-link js-open-video" data-index="0">
+                                <div class="modules-cards__list-link js-open-video" data-index="0" data-playlist="PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n">
                                     <img src="/assets/acessos/Video_Escuro.png" alt="vídeos" class="modules-cards__list-image">
                                     <span class="modules-cards__list-text">vídeos</span>
                                 </div>
                             </li>
                             <li class="modules-cards__list-item">
-                                <a href="/" class="modules-cards__list-link">
+                                <a href="2022_09_28_GA_REQUISITOS_ANALISE.pdf" target="_eblank" class="modules-cards__list-link">
                                     <img src="/assets/acessos/Ebook_Escuro.png" alt="e-book" class="modules-cards__list-image">
                                     <span class="modules-cards__list-text">e-book</span>
                                 </a>
@@ -144,7 +184,7 @@ tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
                         </div>
                         <ul class="modules-cards__list">
                             <li class="modules-cards__list-item">
-                                <div class="modules-cards__list-link js-open-video" data-index="1">
+                                <div class="modules-cards__list-link js-open-video" data-index="1" data-playlist="PL0Adxt5YkNgK-znWXDK9UEoaHo_hxHwtK">
                                     <img src="/assets/acessos/Video_Escuro.png" alt="vídeos" class="modules-cards__list-image">
                                     <span class="modules-cards__list-text">vídeos</span>
                                 </div>
@@ -272,12 +312,20 @@ tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
             <div id="player" class="video__player"></div>
         </div>
     </div>
+
+    <iframe id="video" class="video-teste" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+    </iframe>
+
 </body>
 
-<script src="https://www.youtube.com/iframe_api"></script>
+<script src="js/main.js"></script>
+<script src="js/darkmode.js"></script>
+<!--<script src="https://www.youtube.com/iframe_api"></script> -->
 <script src="https://kit.fontawesome.com/a9545f17e8.js"></script>
 <script src="js/modules-cards.js"></script>
-<script src="js/youtube.js"></script>
+<!-- <script src="js/youtube.js"></script> -->
+<script src="js/api-youtube.js"></script>
 <script src="js/countries.js"></script>
 
 <script>

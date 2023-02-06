@@ -31,14 +31,20 @@ function tamanhofonte (sizeAdd) {
 
 // Register 
 
-document.querySelector(".js-button-has-login").addEventListener("click", function(e){
-	document.querySelector(".js-register").classList.remove("register__form--active");
-	document.querySelector(".js-login").classList.add("register__form--active");
-})
 
-document.querySelector(".js-button-create").addEventListener("click", function(e){
-	document.querySelector(".js-login").classList.remove("register__form--active");
-	document.querySelector(".js-register").classList.add("register__form--active");
-})
+if(document.querySelector(".js-button-has-login")){
+	document.querySelector(".js-button-has-login").addEventListener("click", function(e){
+		document.querySelector(".js-register").classList.remove("register__form--active");
+		document.querySelector(".js-login").classList.add("register__form--active");
+	})
+}
+
+if(document.querySelector(".js-button-create")){
+	document.querySelector(".js-button-create").addEventListener("click", function(e){
+		document.querySelector(".js-login").classList.remove("register__form--active");
+		document.querySelector(".js-register").classList.add("register__form--active");
+	})
+}
+
 
 

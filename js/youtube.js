@@ -8,8 +8,9 @@ const containerNext = document.querySelector(".js-next-container");
 openModalElement.forEach(function(element){
     element.addEventListener("click", function(){
         var indexVideo = element.dataset.index;
+        var playlistID = element.dataset.playlist;
         modal.classList.add("video--active");
-        onPlayerReady(indexVideo);
+        onPlayerReady(indexVideo, playlistID);
     })
     
 })
@@ -30,10 +31,10 @@ function onYouTubePlayerAPIReady() {
     });
 }
 
-function onPlayerReady(index) {
+function onPlayerReady(index, playlistID) {
     player.loadPlaylist({
         'listType': 'playlist',
-        'list': 'PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n',
+        'list': playlistID,
         "loopPlaylists": false,
         "index": index
     });
