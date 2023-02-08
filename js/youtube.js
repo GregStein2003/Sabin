@@ -7,10 +7,9 @@ const containerNext = document.querySelector(".js-next-container");
 
 openModalElement.forEach(function(element){
     element.addEventListener("click", function(){
-        var indexVideo = element.dataset.index;
         var playlistID = element.dataset.playlist;
         modal.classList.add("video--active");
-        onPlayerReady(indexVideo, playlistID);
+        onPlayerReady(playlistID);
     })
     
 })
@@ -24,19 +23,15 @@ function onYouTubePlayerAPIReady() {
         //    'showinfo': 0,
         //    'autoplay': 0,
         //    'controls': 0,
-         },
-        events: {
-            'onStateChange': onPlayerStateChange,
-        }
+         }
     });
 }
 
-function onPlayerReady(index, playlistID) {
+function onPlayerReady(playlistID) {
     player.loadPlaylist({
         'listType': 'playlist',
         'list': playlistID,
-        "loopPlaylists": false,
-        "index": index
+        "loopPlaylists": false
     });
 
     onChangeTitle(player)
@@ -86,4 +81,3 @@ document.querySelector(".js-prev").addEventListener("click", ()=> {
     onChangeTitle(player)
     verifyIndexVideo(player)
 })
-

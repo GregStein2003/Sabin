@@ -1,26 +1,35 @@
 const apiKey = 'AIzaSyAnPO7JaEMbrENYdEYsyCMcfL9WYRYUfRM';
-const playlistId = "PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n";
+const elementCallback = document.querySelectorAll(".js-open-video");
+const modal = document.querySelector(".js-video");
 
-console.log("teste")
+elementCallback.forEach(function(element){
+    element.addEventListener("click", function(){
+        var playlistId = element.dataset.playlist;
+        getPlaylistData(playlistId)
+    })
+})
 
-async function getPlaylistData() {
-  console.log("alou")
+
+async function getPlaylistData(playlistId) {
+    console.log(playlistId)
   const response = await fetch(
     `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${playlistId}&key=${apiKey}`
   );
   const data = await response.json();
+  
+  const playlistItems = data.items;
 
-  console.log(data)
+  modal.classList.add("video--active");
 
-  return data;
+  playlistItems.forEach((item) => {
+    var urlIframe = `http://www.youtube.com/embed?listType=playlist&list=${playlistId}` 
+    document.querySelector(".video-teste").src = urlIframe;
+  })
+
 }
-
-getPlaylistData()
 
 async function insertPlaylist() {
   const playlistData = await getPlaylistData();
-
-  console.log(playlistData)
 
   const playlistItems = playlistData.items;
   const playlistContainer = document.getElementById('playlist-container');
@@ -36,15 +45,12 @@ async function insertPlaylist() {
     //playlistElement.href = `https://www.youtube.com/playlist?list=${playlistId}`;
     //playlistElement.innerText = playlistTitle;
 
-
     // playlistContainer.appendChild(playlistElement);
-
-    return;
 
   });
 }
 
-insertPlaylist()
+// insertPlaylist()
 
 
 
