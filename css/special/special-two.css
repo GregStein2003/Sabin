@@ -1,9 +1,9 @@
 .home-modules__background-visual-element {
     background-image:    
         linear-gradient(
-            rgba(243, 108, 66, 1), 
-            rgba(243, 108, 66, 1)
-        ), url("/assets/icones/Mais_Laranja.png");
+            rgba(243, 108, 66, .8), 
+            rgba(243, 108, 66, .8)
+        ), url("/assets/icones/ECom_Laranja.png");
 }
 
 
@@ -11,8 +11,20 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.modules-cards__item {
-    background-image: url("/assets/business.jpg");
+.modules-cards__item:nth-child(1) {
+    background-image: url("/assets/chapters/background-chapter-3.jpg");
+}
+
+.modules-cards__item:nth-child(2) {
+    background-image: url("/assets/chapters/background-chapter-4.jpg");
+}
+
+.modules-cards__item:nth-child(3) {
+    background-image: url("/assets/chapters/background-chapter-5.jpg");
+}
+
+.modules-cards__item:nth-child(4) {
+    background-image: url("/assets/chapters/background-chapter-6.jpg");
 }
 
 .modules-cards__item-background-opacity {
@@ -24,30 +36,34 @@
 }
 
 .journey-modules .journey__item {
-    border: 4px solid #f794ad;
+    border: 4px solid #faad95;
 }
 
 .journey-modules .journey__item--1,
 .journey-modules .journey__item--15 {
-    box-shadow: 0 0 0 7px #f794ad;
-    background-color: #f794ad;
+    box-shadow: 0 0 0 7px #faad95;
+    background-color: #faad95;
     border: 4px solid white;
 }
 
 .journey-modules .journey__item-label {
-    color: #f794ad;
+    color: #faad95;
 }
 
-.journey-modules .journey__item--3 .journey__item-label,
-.journey-modules .journey__item--4 .journey__item-label{
-    color: rgba(236, 14, 71, 1);
+.journey-modules .journey__item--5 .journey__item-label,
+.journey-modules .journey__item--6 .journey__item-label,
+.journey-modules .journey__item--7 .journey__item-label,
+.journey-modules .journey__item--8 .journey__item-label{
+    color: #EE6C3B;
 }
 
-.journey-modules .journey__item--3,
-.journey-modules .journey__item--4{
-    border: 4px solid rgba(236, 14, 71, 1);
+.journey-modules .journey__item--5,
+.journey-modules .journey__item--6,
+.journey-modules .journey__item--7,
+.journey-modules .journey__item--8{
+    border: 4px solid #EE6C3B;
 }
 
 .video__container {
-    background: rgba(236, 14, 71, 1);
+    background: #EE6C3B;
 }

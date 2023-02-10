@@ -1,17 +1,21 @@
 .home-modules__background-visual-element {
-    background-image:     linear-gradient(
-        rgba(236, 14, 71, 1), 
-        rgba(236, 14, 71, 1)
+    background-image: linear-gradient(
+        rgba(236, 14, 71, .8), 
+        rgba(236, 14, 71, .8)
       ),
-      url("/assets/icones/L.png");
+      url("/assets/icones/Interrogacao_Vermelho-opacity.png");
 }
 
 .modules-cards__container {
     grid-template-columns: 1fr 1fr;
 }
 
-.modules-cards__item {
-    background-image: url("/assets/business.jpg");
+.modules-cards__item:nth-child(1) {
+    background-image: url("/assets/chapters/background-chapter-1.jpg");
+}
+
+.modules-cards__item:nth-child(2) {
+    background-image: url("/assets/chapters/background-chapter-1.jpg");
 }
 
 .modules-cards__item-background-opacity {
