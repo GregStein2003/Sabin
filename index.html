@@ -842,16 +842,16 @@
                     dolore te feugait nulla facilisi.</p>
                     <form action="POST" class="register__form js-register register__form--active">
                         <div class="register__form-item">
-                            <label class="register__form-label" for="">Nome completo ou como quer ser chamado(a)</label>
-                            <input type="text" class="register__form-input">
+                            <label class="register__form-label" for="full-name">Nome completo ou como quer ser chamado(a)</label>
+                            <input type="text" class="register__form-input" name="full-name">
                             <div class="register__required-image-container">
                                 <img src="/assets/icones/Asterisco_Amarelo.png" alt="" class="register__required-image register__required-image--lightning">
                                 <img src="/assets/icones/Asterisco_Vermelho.png" alt="" class="register__required-image">
                             </div>
                         </div>
                         <div class="register__form-item">
-                            <label class="register__form-label" for="">e-mail</label>
-                            <input type="email" class="register__form-input">
+                            <label class="register__form-label" for="email">e-mail</label>
+                            <input type="email" class="register__form-input" name="email">
                             <div class="register__required-image-container">
                                 <img src="/assets/icones/Asterisco_Amarelo.png" alt="" class="register__required-image register__required-image--lightning">
                                 <img src="/assets/icones/Asterisco_Vermelho.png" alt="" class="register__required-image">
@@ -859,7 +859,7 @@
                         </div>
                         <div class="register__form-item">
                             <i class="fa-solid fa-play register__icon-select"></i>
-                            <select id="estado" name="estado" class="register__form-input register__form-input--select">
+                            <select id="estado" name="state" class="register__form-input register__form-input--select">
                                 <option value="">UF:</option>
                                 <option value="AC">Acre</option>
                                 <option value="AL">Alagoas</option>
@@ -893,13 +893,13 @@
                         </div>
                         <div class="register__form-item">
                             <i class="fa-solid fa-play register__icon-select"></i>
-                            <select id="estado" name="estado" class="register__form-input register__form-input--select">
+                            <select id="estado" name="city" class="register__form-input register__form-input--select">
                                 <option value="">Cidade/Município:</option>
                             </select>
                         </div>
                         <div class="register__form-item">
                             <i class="fa-solid fa-play register__icon-select"></i>
-                            <select id="categorias" name="categorias" class="register__form-input register__form-input--select">
+                            <select id="categorias" name="categories" class="register__form-input register__form-input--select">
                                 <option value="">Você é:</option>
                                 <option value="SP">Setor Público</option>
                                 <option value="AL">Setor Privado</option>
@@ -911,13 +911,13 @@
                         </div>
                         <div class="register__footer-container">
                             <label class="register__form-label-checkbox">
-                                <input type="checkbox" name="checkbox" />
+                                <input type="checkbox" name="checkbox-terms" />
                                 Li e concordo com os <a href="">Termos e CONDIÇÕES</a>
                             </label>
 
                             <a href="javascript:void(0)" class="register__link js-button-has-login">JÁ POSSUI CADASTRO?</a>
 
-                            <button type="submit" class="register__button">cadastrar</button>
+                            <button type="submit" class="register__button js-button-register">cadastrar</button>
                         </div>
                     </form>
 
@@ -938,7 +938,7 @@
 
                             <a href="javascript:void(0)" class="register__link js-button-create">CRIAR CONTA</a>
 
-                            <button type="submit" class="register__button">entrar</button>
+                            <button type="submit" class="register__button js-button-login">entrar</button>
                         </div>
                     </form>
             </div>
@@ -999,12 +999,16 @@
     </section>
 
 </body>
+<script src="plugins/firebase/firebase-app.js"></script>
+<script src="plugins/firebase/firebase-database.js"></script>
+<script src="js/firebase-init.js"></script>
 <script src="plugins/swiperjs/swiper-bundle.min.js"></script>
 <script src="https://kit.fontawesome.com/a9545f17e8.js"></script>
 <script src="js/main.js"></script>
-<script src="js/modal.js"></script>
 <script src="js/carousel.js"></script>
+<script src="js/modal.js"></script>
 <script src="js/darkmode.js"></script>
 <script src="js/journey.js"></script>
+<script src="js/form.js"></script>
 </html>
 

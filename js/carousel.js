@@ -13,4 +13,3 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.js-button-prev',
     },
 });
-

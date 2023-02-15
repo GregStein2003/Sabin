@@ -4,7 +4,6 @@ const modal = document.querySelector(".js-video");
 const containerPrev = document.querySelector(".js-prev-container");
 const containerNext = document.querySelector(".js-next-container");
 
-
 openModalElement.forEach(function(element){
     element.addEventListener("click", function(){
         var playlistID = element.dataset.playlist;
@@ -13,8 +12,6 @@ openModalElement.forEach(function(element){
     })
     
 })
-
-
 
 function onYouTubePlayerAPIReady() {
     player = new YT.Player('player', {
@@ -43,10 +40,6 @@ function onChangeTitle(e){
     setTimeout(function(){
         document.querySelector(".js-title-video").innerHTML = e.getIframe().getAttribute("title");
     }, 2000)
-}
-
-function onPlayerStateChange(e){
-
 }
 
 function verifyIndexVideo(e) {
