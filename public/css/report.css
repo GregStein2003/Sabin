@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/lora-regular.woff2') format('woff2'),
+         url('../fonts/lora-regular.woff') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Jost - Light';
+    src: url('../fonts/jost-light.woff2') format('woff2'),
+         url('../fonts/josh-light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost - Bold';
+    src: url('../fonts/jost-bold.woff2') format('woff2'),
+         url('../fonts/josh-bold.woff') format('woff');
+    font-weight: 700;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    column-gap: 15px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-family: 'Jost - Bold';
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background-color: rgba(113, 4, 97, 1);
+    color: white;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.name-file-export {
+    font-family: 'Jost - Bold';
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: white;
+    color: rgba(113, 4, 97, 1);
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid rgba(113, 4, 97, 1);
+    min-width: 250px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: rgba(113, 4, 97, 1);
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid rgba(113, 4, 97, 1);
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: rgba(113, 4, 97, 1);
+}
