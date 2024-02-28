@@ -2,7 +2,7 @@
 
 > Status: Concluído ✅
 
-<p> Projeto desenvolvido para ser um Website, no qual microempreendedores podem ter acesso a conteudos exclusivos de empreendimento em parceria com o Sabin e Viggas Colab.</p>
+<p> Projeto desenvolvido para ser um Website, no qual empreendedores sociais podem ter acesso a conteudos exclusivos de empreendimento em parceria com o Sabin e Viggas Colab.</p>
 
 #### Princpais funcionalidades
 
